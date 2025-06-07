@@ -1,6 +1,6 @@
 # 📄Changit - Auto-Generate Changelogs Using AI
 
-Changeit is an AI-powered tool that auto-generates changelogs from your git commits. Available as both CLI and GUI.
+Changit is an AI-powered tool that auto-generates changelogs from git commits to save hours of manual work. Available as both CLI and GUI.
 
 ## ✨ Features
 

@@ -1,0 +1,91 @@
+# Sensitive files
+.env
+.env.example
+
+# Git and version control
+.git/
+.github/
+.gitignore
+.gitattributes
+.pre-commit-config.yaml
+
+# Python cache and build artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pytest_cache/
+*.egg-info/
+.python-version
+
+# Pytest and test caches
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.cache/
+coverage.xml
+nosetests.xml
+test-results.xml
+
+# Packaging/build artifacts
+*.egg-info/
+.eggs/
+build/
+dist/
+bin/
+*.spec
+
+
+# IDE settings
+.vscode/
+*.code-workspace
+.ruff_cache/
+
+# Virtual environments
+venv/
+.venv/
+
+# Local development and runtime files
+memory/
+notebooks/
+*.ipynb_checkpoints/
+
+# Documentation
+docs/
+README.md
+CHANGELOG.md
+mkdocs.yml
+mkdocs_macros.py
+index.html
+
+# Testing
+tests/
+
+# Build automation
+Makefile
+act.mk
+
+# Generated datasets
+output/
+
+# static files
+assets/
+changelog_generated/
+
+# CI/CD local tools
+.gitlab-ci-local/
+ci/
+setup.env
+.gitlab-ci.yml
+gitlabci.mk
+
+
+# Packaging/build artifacts
+*.egg-info/
+.eggs/
+build/
+dist/
+bin/
+*.spec

@@ -1,0 +1,24 @@
+[project]
+name = "changit"
+version = "0.1.0"
+description = "Auto-generate changelog from git commits using LLM"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "customtkinter>=5.2.2",
+    "python-dotenv>=1.1.0",
+    "requests>=2.31.0",
+]
+
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "D"]
+ignore = ["D203", "D213"]
+
+[tool.ruff.lint.per-file-ignores]
+"**/__init__.py" = ["D104"]  # Missing docstring in public package
+
+[dependency-groups]
+dev = [
+    "pyinstaller>=6.14.0",
+]

@@ -27,10 +27,12 @@ Changit is an AI-powered tool that auto-generates changelogs from git commits to
   - **macOS:** `brew install make`
   - **Linux:** `sudo apt install make`
 
-**Recommended:**
-- **Git tags** for version tracking (changit reads commits since last tag)
-- **Conventional commits** (feat:, fix:, docs:, etc. - AI works better with descriptive messages)
-- **Individual commits only** (merge commits automatically excluded)
+**Functional Requirements:**
+- A local Git repository with commit history
+- A `pyproject.toml` file containing the project name and version
+- Commits must exist on the `main` branch (merge commits are ignored)
+- Commit messages should ideally follow the conventional format (e.g., `feat:`, `fix:`)
+
 
 ## 🚀 Quick Start
 
@@ -76,6 +78,7 @@ make compile-exe
 ```
 Find executable in `dist/` folder - create desktop shortcut for daily use.
 
+👉 Or simply [download the executable here](https://lisekarimi.github.io/changit/)
 
 ## 📄 Output Format
 

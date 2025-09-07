@@ -6,7 +6,6 @@ Changit is an AI-powered tool that auto-generates changelogs from git commits to
 
 - 🤖 **AI-powered**: Uses Claude or GPT to categorize commits
 - 🖥️ **Dual interfaces**: Modern GUI or CLI for automation
-- 🔒 **Privacy-first**: 100% local operation - your code never leaves your machine
 - 📝 **Smart formatting**: Organizes commits into Added/Changed/Fixed/Removed with emojis
 - 🏷️ **Auto-versioning**: Reads version from `pyproject.toml`
 - 🌍 **Universal Git support**: Works with GitHub, GitLab, Bitbucket, or any Git platform
@@ -126,18 +125,6 @@ Find executable in `dist/` folder - create desktop shortcut for daily use.
 | Invalid API key | Verify key in .env (CLI) or GUI input |
 | No version found | Ensure `pyproject.toml` has `[project] version = "x.x.x"` |
 | GUI button corruption | Restart app (known CustomTkinter multi-monitor issue) |
-
-## 🎁 Why Changit?
-
-**Security & Privacy:**
-- 🔒 Local-only operation
-- 🚫 No remote access to your repositories
-- ⚡ Direct git access for maximum speed
-
-**Perfect for:**
-- Enterprise and proprietary projects
-- Security-conscious developers
-- Teams with confidential codebases
 
 ## 📄 License
 

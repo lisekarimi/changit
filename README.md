@@ -2,6 +2,8 @@
 
 Changit is an AI-powered tool that auto-generates changelogs from git commits to save hours of manual work. Available as both CLI and GUI.
 
+🌐 **Visit the [landing page](https://changit.lisekarimi.com) to learn more, chat with our AI assistant, and explore the documentation.**
+
 ## ✨ Features
 
 - 🤖 **AI-powered**: Uses Claude or GPT to categorize commits
@@ -77,7 +79,7 @@ make compile-exe
 ```
 Find executable in `dist/` folder - create desktop shortcut for daily use.
 
-👉 Or simply [download the executable here](https://lisekarimi.github.io/changit/)
+👉 Or simply [download the executable here](https://changit.lisekarimi.com/)
 
 ## 📄 Output Format
 

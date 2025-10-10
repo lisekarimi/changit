@@ -1,3 +1,15 @@
+
+## 🏷️ [0.1.1]
+
+### 🗑️ Removed
+- Frontend/website components moved to separate [`changit-web`](https://github.com/lisekarimi/changit-web) repository
+- Landing page and web interface separated from core tool functionality
+- Web-related dependencies and assets removed from main repository
+
+### 🔄 Changed
+- Repository structure simplified to focus on core CLI/GUI functionality
+- Product separation: core tool vs. website/landing page now in distinct repositories
+
 ## [0.1.0]
 
 ### ✨ Added

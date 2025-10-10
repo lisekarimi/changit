@@ -17,7 +17,7 @@ class ChangitGUI:
     def __init__(self):
         """Initialize the GUI application."""
         self.root = ctk.CTk()
-        self.root.title("Changit 0.1.0 - Changelog Generator")
+        self.root.title("Changit 0.1.1 - Changelog Generator")
         self.root.geometry("900x700")
 
         # Fix multi-monitor scaling issues

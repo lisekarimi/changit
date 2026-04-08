@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changit - Documentation</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Complete documentation for Changit AI changelog generator. Learn how to install, configure, and use Changit to automate your changelog workflow with Claude and GPT.">
+    <meta name="keywords" content="changit documentation, AI changelog setup, changelog generator guide, Claude API, GPT API, git changelog tutorial, developer documentation">
+    <meta name="author" content="Lise Karimi">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="en">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Changit Documentation - AI Changelog Generator Guide">
+    <meta property="og:description" content="Complete documentation for Changit AI changelog generator. Learn how to install, configure, and use Changit to automate your changelog workflow with Claude and GPT.">
+    <meta property="og:image" content="https://changit.lisekarimi.com/assets/img/og-img.png">
+    <meta property="og:image:alt" content="Changit AI Changelog Generator Documentation">
+    <meta property="og:url" content="https://changit.lisekarimi.com/about">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Changit">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Changit Documentation - AI Changelog Generator Guide">
+    <meta name="twitter:description" content="Complete documentation for Changit AI changelog generator. Learn how to install, configure, and use Changit to automate your changelog workflow with Claude and GPT.">
+    <meta name="twitter:image" content="https://changit.lisekarimi.com/assets/img/og-img.png">
+    <meta name="twitter:image:alt" content="Changit AI Changelog Generator Documentation">
+    <meta name="twitter:creator" content="@lisekarimi">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="msapplication-TileColor" content="#3b82f6">
+    <meta name="application-name" content="Changit">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://changit.lisekarimi.com/about">
+
+    <!-- Favicon and Icons -->
+    <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="../assets/img/favicon.ico">
+
+    <!-- External Resources -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero doc-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>📄 Changit Documentation</h1>
+                <p class="hero-subtitle">Everything you need to know to get started with Changit</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fixed Navigation Bar -->
+    <nav class="doc-navbar" id="docNavbar">
+        <div class="container">
+            <div class="doc-nav">
+                <a href="#features" class="doc-nav-link">Features</a>
+                <a href="#prerequisites" class="doc-nav-link">Prerequisites</a>
+                <a href="#quickstart" class="doc-nav-link">Quick Start</a>
+                <a href="#docker" class="doc-nav-link">Docker</a>
+                <a href="#troubleshooting" class="doc-nav-link">Troubleshooting</a>
+                <a href="/" class="doc-nav-link home-link">
+                    <i class="fas fa-home"></i> Home
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Features Section -->
+    <section id="features" class="doc-section">
+        <div class="container">
+            <h2>✨ Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered</h3>
+                    <p>Uses Claude or GPT to intelligently categorize commits</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🖥️</div>
+                    <h3>Dual Interfaces</h3>
+                    <p>Modern GUI or CLI for automation</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>Smart Formatting</h3>
+                    <p>Organizes commits into Added/Changed/Fixed/Removed with emojis</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏷️</div>
+                    <h3>Auto-Versioning</h3>
+                    <p>Reads version from pyproject.toml</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Universal Git Support</h3>
+                    <p>Works with GitHub, GitLab, Bitbucket, or any Git platform</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prerequisites Section -->
+    <section id="prerequisites" class="doc-section alt-bg">
+        <div class="container">
+            <h2>📋 Prerequisites</h2>
+
+            <div class="prereq-container">
+                <div class="prereq-group">
+                    <h3>Required</h3>
+                    <ul class="prereq-list">
+                        <li><strong>Python 3.11+</strong> (requires-python = ">=3.11")</li>
+                        <li><strong>UV Package Manager</strong> - <a href="https://docs.astral.sh/uv/getting-started/installation/" target="_blank">Installation Guide</a></li>
+                        <li><strong>Local git repository</strong> with commit history</li>
+                        <li><strong>pyproject.toml</strong> with project name and version</li>
+                        <li>Claude API key (<code>ANTHROPIC_API_KEY</code>) or OpenAI API key (<code>OPENAI_API_KEY</code>) in <code>.env</code></li>
+                    </ul>
+                </div>
+
+                <div class="prereq-group">
+                    <h3>Optional</h3>
+                    <ul class="prereq-list">
+                        <li><strong>Docker Desktop</strong> - <a href="https://www.docker.com/products/docker-desktop" target="_blank">Download</a> (for containerized usage)</li>
+                        <li><strong>Make</strong>
+                            <ul class="nested-list">
+                                <li><strong>Windows:</strong> <code>winget install GnuWin32.Make</code></li>
+                                <li><strong>macOS:</strong> <code>brew install make</code></li>
+                                <li><strong>Linux:</strong> <code>sudo apt install make</code></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="prereq-group">
+                    <h3>Functional Requirements</h3>
+                    <ul class="prereq-list">
+                        <li>A local Git repository with commit history</li>
+                        <li>A <code>pyproject.toml</code> file containing the project name and version</li>
+                        <li>Commits must exist on the <code>main</code> branch (merge commits are ignored)</li>
+                        <li>Commit messages should ideally follow the conventional format (e.g., <code>feat:</code>, <code>fix:</code>)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start Section -->
+    <section id="quickstart" class="doc-section">
+        <div class="container">
+            <h2>🚀 Quick Start</h2>
+
+            <div class="quickstart-steps">
+                <div class="step-section">
+                    <h3>Clone and Configure</h3>
+                    <div class="code-block">
+                        <pre><code>git clone https://github.com/lisekarimi/changit.git
+cd changit
+uv sync</code></pre>
+                    </div>
+                    <p class="step-note">Rename <code>.env.example</code> to <code>.env</code> and populate it with the required secrets.</p>
+                    <p class="step-note">You can either choose the GUI or CLI.</p>
+                </div>
+
+                <div class="step-section">
+                    <h3>GUI (Recommended)</h3>
+                    <div class="code-block">
+                        <pre><code>uv run gui.py</code></pre>
+                    </div>
+                    <ol class="numbered-steps">
+                        <li>Browse and select your git project</li>
+                        <li>Choose Claude or OpenAI</li>
+                        <li>Enter API key</li>
+                        <li>Click "🚀 Generate Changelog"</li>
+                    </ol>
+                </div>
+
+                <div class="step-section">
+                    <h3>CLI</h3>
+                    <div class="code-block">
+                        <pre><code>uv run main.py</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Docker Section -->
+    <section id="docker" class="doc-section alt-bg">
+        <div class="container">
+            <h2>🐳 Docker</h2>
+            <div class="code-block">
+                <pre><code>make docker-build
+# Update PATH_SCAN in Makefile with your project path
+make docker-run</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executable Section -->
+    <section class="doc-section">
+        <div class="container">
+            <h2>📦 Executable</h2>
+            <p>Build standalone .exe:</p>
+            <div class="code-block">
+                <pre><code>make build-exe
+make compile-exe</code></pre>
+            </div>
+            <p class="step-note">Find executable in <code>dist/</code> folder - create desktop shortcut for daily use.</p>
+            <div class="cta-inline">
+                <p>👉 Or simply <a href="https://lisekarimi.github.io/changit/" target="_blank">download the executable here</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Output Format Section -->
+    <section class="doc-section alt-bg">
+        <div class="container">
+            <h2>📄 Output Format</h2>
+            <div class="code-block output-example">
+                <pre><code>## [1.2.0]
+
+### ✨ Added
+- New user authentication system
+
+### 🔄 Changed
+- Improved performance
+
+### 🐛 Fixed
+- Memory leak resolved
+
+### 🗑️ Removed
+- Deprecated API endpoints
+
+----
+
+## [1.1.0]
+...previous entries</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Configuration Section -->
+    <section class="doc-section">
+        <div class="container">
+            <h2>⚙️ Configuration</h2>
+
+            <div class="config-groups">
+                <div class="config-group">
+                    <h3>API Keys</h3>
+                    <ul class="config-list">
+                        <li><strong>CLI:</strong> Set in <code>.env</code> file
+                            <ul class="nested-list">
+                                <li>If both keys present: Claude used first</li>
+                                <li>Comment out one key to switch LLMs</li>
+                            </ul>
+                        </li>
+                        <li><strong>GUI:</strong> Enter directly (not saved between sessions)</li>
+                    </ul>
+                </div>
+
+                <div class="config-group">
+                    <h3>Git Settings</h3>
+                    <ul class="config-list">
+                        <li>Reads commits from <strong>main branch only</strong></li>
+                        <li>Processes commits since last git tag</li>
+                        <li>Excludes merge commits automatically</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Troubleshooting Section -->
+    <section id="troubleshooting" class="doc-section alt-bg">
+    <div class="container">
+        <h2>🔧 Troubleshooting</h2>
+        <div class="troubleshooting-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Issue</th>
+                        <th>Solution</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Import errors</td>
+                        <td>Run <code>uv sync</code></td>
+                    </tr>
+                    <tr>
+                        <td>No commits found</td>
+                        <td>Check main branch has commits since last tag</td>
+                    </tr>
+                    <tr>
+                        <td>Invalid API key</td>
+                        <td>Verify key in <code>.env</code> (CLI) or GUI input</td>
+                    </tr>
+                    <tr>
+                        <td>No version found</td>
+                        <td>Ensure <code>pyproject.toml</code> has <code>[project] version = "x.x.x"</code></td>
+                    </tr>
+                    <tr>
+                        <td>GUI button corruption</td>
+                        <td>Restart app (known CustomTkinter multi-monitor issue)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="table-hint" style="text-align: center; color: #64748b; font-size: 0.9rem; margin-top: 1rem; font-style: italic;">
+            📱 Swipe left/right to see full table on mobile
+        </p>
+    </div>
+</section>
+
+
+    <!-- Back to Home CTA -->
+    <section class="final-cta-section">
+        <div class="container">
+            <div class="final-cta">
+                <h3>Ready to Get Started?</h3>
+                <a href="/" class="download-btn secondary">
+                    <i class="fas fa-home"></i>
+                    Back to Home
+                </a>
+                <p class="trust-signals">✓ Open source ✓ Free to use ✓ Active development</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore More Projects Section -->
+    <section class="explore-projects-section">
+        <div class="container">
+            <div class="explore-projects">
+                <h3>Explore More Projects</h3>
+                <p>Check out my complete portfolio for more innovative solutions and development work.</p>
+                <a href="https://lisekarimi.com" class="explore-btn" target="_blank">
+                    <i class="fas fa-external-link-alt"></i>
+                    Explore More Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Changit Documentation - AI Changelog Generator Guide",
+        "description": "Complete documentation for Changit AI changelog generator. Learn how to install, configure, and use Changit to automate your changelog workflow with Claude and GPT.",
+        "url": "https://changit.lisekarimi.com/about",
+        "author": {
+            "@type": "Person",
+            "name": "Lise Karimi",
+            "url": "https://lisekarimi.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Changit",
+            "url": "https://changit.lisekarimi.com/"
+        },
+        "datePublished": "2024-01-01",
+        "dateModified": "2024-01-01",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://changit.lisekarimi.com/about"
+        },
+        "about": {
+            "@type": "SoftwareApplication",
+            "name": "Changit",
+            "description": "AI-powered changelog generator"
+        },
+        "articleSection": "Documentation",
+        "keywords": ["changit documentation", "AI changelog setup", "changelog generator guide", "Claude API", "GPT API", "git changelog tutorial", "developer documentation"]
+    }
+    </script>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+        // Add active state to navigation links based on scroll position
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.getElementById('docNavbar');
+            const sections = document.querySelectorAll('.doc-section[id]');
+            const navLinks = document.querySelectorAll('.doc-nav-link[href^="#"]');
+
+            // Add scrolled class to navbar on scroll
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+
+                // Update active link based on scroll position
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.scrollY >= sectionTop - 200) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // Smooth scroll for navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        const navbarHeight = navbar.offsetHeight;
+                        const targetPosition = targetSection.offsetTop - navbarHeight - 20;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
